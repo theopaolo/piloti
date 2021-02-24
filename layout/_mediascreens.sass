@@ -1,0 +1,141 @@
+@media screen and (min-width: $small)   
+    
+@media screen and (min-width: $medium)
+    .logo
+        span
+            font-size: 1.2rem
+    
+    .container
+        padding: 2rem
+
+    .header
+        display: none
+    .d-header, .d-menu 
+        display: flex
+    .col-g
+        grid-column-gap: 2rem
+    .row-g
+        grid-row-gap: 3rem
+    h1, .projects-category-name, .foot-title
+        font-size: size(50px)
+ 
+    h2,.morem, .category-name, .projects-category
+        font-size: size(28px)
+        line-height:  lineh(28)
+    h3
+        font-size: size(20px)
+        line-height:  lineh(20)
+    p, a
+        font-size: size(16px)
+        line-height:  24px
+
+    .intro-text
+        h1, h2
+            margin-bottom: unset
+            line-height: 3rem
+
+    .intro
+        .bell
+            .intro-text
+                h1, h2
+                    margin-bottom: unset
+                p
+                    margin-bottom: 3rem
+                    font-size: 20px
+                    line-height: 30px
+                    margin-bottom: unset
+            img
+                width: 100%
+                height: 92vh
+                object-fit: cover
+                margin-bottom: unset
+    .pb-box
+        padding: 2rem 0
+        div 
+            svg
+                margin-bottom: unset
+    .home
+        h2
+            font-size: size(60px)
+            line-height:  lineh(60)
+            margin-bottom: 3rem
+
+    .bg-picto
+        top: -30vh
+        width: 160vh
+        height: 160vh
+        svg
+            height: 95vh
+
+    .footPicto
+        svg
+            height: 65vh
+
+    .p-section-bell
+        margin-bottom: 10rem 
+        h1
+            margin-bottom: unset
+            line-height: 3rem
+        h3
+            font-weight: bold
+        img
+            width: 100% !important
+            height: 345px
+            object-fit: cover
+
+    .projects-list 
+        margin-bottom: 10rem
+        section
+            margin-bottom: 6rem
+
+    .category-pitch
+        p
+            font-size: 20px
+            line-height: lineh(20)
+        
+    .project-full
+        margin-bottom: 4rem
+        h2
+            line-height: 1.75rem
+    main 
+        h1:first-of-type
+            margin-bottom: 3rem
+    
+    section
+        p
+            line-height:  25px
+
+    .team
+        h3
+            text-transform: uppercase
+
+    .section-projects
+        svg
+            width: 5rem
+
+    .langs
+        span
+            margin-bottom: .5rem
+
+@media screen and (min-width: $big)
+    .project-full
+        h2
+            margin-bottom: unset
+
+        img
+            height: 100%
+            object-fit: cover
+        .footPicto
+            svg
+                height: 75vh
+
+@media screen and (min-width: $huge)
+    $base-size: 18px
+    .section-projects
+        svg
+            width: unset
+    .project-full
+        h2
+            span
+                width: 50px
+                border-bottom: 2px solid $primary

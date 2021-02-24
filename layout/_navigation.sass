@@ -1,0 +1,184 @@
+.header
+    display: flex
+    justify-content: space-between
+    margin-bottom: size(60px)
+
+    .logo
+        padding: 12px    
+        svg
+            margin-bottom: 4px
+            width: 64px
+            height: 64px
+
+    .btn-nav
+        display: flex
+        flex-direction: row
+        padding-right: 1rem
+        padding-top: 1rem
+        position: fixed
+        top: 1rem
+        right: 0
+        .nav-dot
+            width: 8px
+            height: 8px
+            background: $accent
+            border-radius: 50%
+            margin-left: 8px
+            margin-bottom: 0.5rem
+
+.rtl
+    .header
+        .btn-nav
+            left: 0
+            right: unset
+            padding-left: 1rem
+            .nav-dot
+                margin-right: 8px
+                margin-left: unset
+nav
+    display: flex
+    flex-direction: row
+    height: 101vh
+    width: 101%
+    position: fixed
+    top: 0
+    transform: translateX(100vw)
+    transition: all .3s ease-in-out
+
+    .nav-sidebar
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        background-color: white
+        padding: 12px
+        .logo
+            padding: unset
+        .langs
+            margin-top: auto
+            margin-bottom: 1rem
+       
+    .nav-menu
+        background-color: $light
+        padding: 1rem
+        width: 100%
+        position: relative
+        display: flex
+        flex-direction: column
+        overflow: auto
+        button
+            color: $accent
+            text-align: right
+            text-transform: uppercase
+            display: flex
+            flex-direction: column
+            align-self: flex-end
+            justify-content: center
+            margin-bottom: 2rem
+            svg
+                align-self: center
+
+    .categories
+        a
+            color: $accent
+            font-weight: bold
+            
+    ul
+        li
+            text-transform: uppercase
+            letter-spacing: 0.8px
+            a
+                font-size: 1rem
+    li
+        margin-bottom: 2rem
+        display: flex
+        flex-direction: row
+        align-items: center
+        .nav-icon
+            margin-right: 1rem
+            svg 
+                width: 42px
+                height: auto
+.rtl
+    nav
+        li
+            .nav-icon
+                margin-right: unset
+                margin-left: 1rem    
+
+.menuOpen
+    z-index: 9
+    .logo
+        svg
+            animation: rotation .5s ease-in-out
+            animation-delay: .5s
+            
+.d-header, .d-menu
+    display: none
+    flex-direction: column
+    height: 95vh
+    position: sticky
+    top: 2rem
+    text-transform: uppercase
+    padding-bottom: 1rem
+    a
+        letter-spacing: 0.7px
+
+.bord-b
+    margin-bottom: 1.2rem
+    position: relative
+    &::after
+        position: absolute
+        content: ''
+        border-bottom: 2px solid #FF9800
+        bottom: -0.5rem
+        right: 0%
+        width: 50px    
+
+.bord-b + li 
+    margin-top: 1rem  
+
+.team
+  .bord-b
+        &::after
+           left: 0%  
+           border-color: $primary
+    
+.d-header
+    justify-content: space-between
+    .logo
+        padding: unset
+    .bord-b
+        &::after
+           left: 0% 
+           
+.d-menu
+    text-align: right
+    right: 1rem
+
+
+    .contact
+        margin-top: auto
+        text-align: right
+        width: fit-content
+        width: max-content
+        align-self: flex-end
+        text-align: center
+        a
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+        span
+            svg
+                margin-bottom: .5rem
+.langs 
+    display: flex
+    flex-direction: column
+    text-transform: capitalize
+    span
+        margin-bottom: 2rem
+    .active
+        a
+            color: $accent
+    .he
+        direction: rtl 
+        font-family: 'Assistant', sans-serif, 

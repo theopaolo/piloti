@@ -1,0 +1,45 @@
+$small : 600px;
+$medium: 900px;
+$large : 1200px;
+$big   : 1440px;
+$huge  : 1700px;
+
+// Base font size 1rem = $base-size
+$base-size: 16px;
+$bodyPadding: 0.8rem;
+
+//Function to convert px value into rem
+//You can replace rem with any other value you want (rem is most preferred value for web)
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
+@function lineh($target, $context: 1.3 ) {
+  @return ($target * $context) * 1px;
+}
+
+/* Define the mixin */
+@mixin fluid-typography($minFont,$maxFont,$minBreakpoint,$maxBreakpoint) {
+  
+  /* Define variable for media query */
+  $maxLessOne: $maxBreakpoint - 1;
+  
+  /* Define variable for fallback */
+  $avg: ($maxFont + $minFont) / 2;
+ 
+  /* Base font size */
+  font-size: #{$minFont}px;
+  
+  @media (min-width: #{$minBreakpoint}px) and (max-width: #{$maxLessOne}px) {
+    
+    /* Adds a fallback for unsupported browsers */
+    font-size: #{$avg}px;
+      
+    /* The fluid typography magic 🌟  */
+    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * (100vw - #{$minBreakpoint}px) / (#{$maxBreakpoint} - #{$minBreakpoint}))
+  }
+  
+  @media (min-width: #{$maxBreakpoint}px) {
+    font-size: #{$maxFont}px;
+  }
+}

@@ -1,0 +1,135 @@
+body
+    max-width: 1920px
+    margin: 0 auto
+main 
+    margin-bottom: 10rem
+section
+    div
+        svg
+            margin-bottom: 1rem
+
+.container
+    padding: $bodyPadding
+
+.bg-picto
+    position: fixed
+
+    top: 6rem
+    width: 140vw
+    height: 140vw
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background-color: $lighter
+    border-radius: 100%
+    z-index: -999
+    margin: auto
+    left: 50%
+    transform: translateX(-50%)
+    svg
+        width: auto 
+        height: 100vw
+
+.intro
+    margin-bottom: 4rem
+    p
+        margin-bottom: 2rem
+    
+    .bell
+        display: flex
+        flex-direction: column
+        margin-bottom: 6rem
+        img
+            align-self: flex-end
+        a
+            text-transform: uppercase
+            letter-spacing: 0.7px
+
+    .bell-picto
+        svg
+            width: 70px
+            margin-top: 1rem
+            
+.category-name, .projects-category
+    display: flex
+    flex-direction: column
+    line-height: inherit
+    svg
+        width: 90px
+        margin-bottom: 0.5rem
+.projects-list
+    ul
+        li
+            margin-bottom: 0.5rem
+            font-family: "Caecilia", sans-serif
+            &:last-child
+                margin-bottom: 2rem
+
+.section-projects
+    margin-bottom: 4rem
+
+
+/* -------------------------------------------------------------------------- */
+/*                                PROJECT PAGE                                */
+/* -------------------------------------------------------------------------- */
+
+.pb-box
+    border-top: 2px solid $accent
+    border-bottom: 2px solid $accent
+    padding: 1rem 0
+    margin-bottom: 2rem
+    .projects-ul
+        li
+            &:last-child
+                margin-bottom: unset
+
+.projects-category
+    flex-direction: row
+    align-items: center
+    svg
+        width: 44px
+        margin-right: 2rem
+        margin-bottom: 0.5rem
+
+.p-section-bell
+    img
+        width: 100% !important
+        height: 250px
+        object-fit: cover
+.p-bell
+    margin: 0 -0.8rem
+.p-desc
+    &::before
+        content: ''
+        border-bottom: 2px solid $primary
+        width: 50px
+        display: block
+        margin-top: 24px
+        margin-bottom: 24px
+
+.projects-list
+    section
+        margin-bottom: 3rem
+
+.about-items
+    section
+        margin-bottom: 1rem
+        img
+            width: 93px
+            margin-bottom: 2rem
+.team
+    section
+        margin-bottom:  unset
+    img
+        margin-bottom: 2rem
+    .bord-b
+        margin-bottom: 2rem
+        &::after
+            bottom: -1rem
+    h2
+        margin-top: 2rem
+.footPicto 
+    svg
+        height: 35vh

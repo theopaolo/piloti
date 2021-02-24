@@ -1,0 +1,57 @@
+.hide
+    animation: fadeOut .3s ease-in-out
+    animation-fill-mode: forwards
+    display: none
+
+.visible
+    display: block
+    animation: fadeIn .3s ease-in-out
+    animation-fill-mode: forwards
+
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes fadeOut
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+.overflowHide
+    overflow: hidden
+
+.menuOpen
+    transform: translateX(0vw)
+
+.logo a 
+    svg
+        animation: rotation 3s linear infinite
+        animation-play-state: paused
+        &:hover
+            animation-play-state: running
+
+@keyframes rotation
+    100%
+        transform: rotate(360deg)
+    
+.transition-fade 
+    transition: 0.4s
+    opacity: 1
+
+html.is-animating .transition-fade 
+    opacity: 0
+
+.transition-expand
+    animation: expand .7s ease-in-out
+    animation-fill-mode: forwards
+    z-index: 9
+
+@keyframes expand
+    0%
+        transform: translateX(-50%) scale(1)
+    100%
+        transform: translateX(-50%) scale(2)
